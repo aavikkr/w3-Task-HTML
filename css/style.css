@@ -12,6 +12,47 @@ html {
     color: #151515;
 }
 
+
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: 2; /*z-telg kolmemõõtmelisus, mida suurem, seda lähemal element sellele asub*/
+    top: 0; /*viime 0-punkti vasakusse ülaserva*/
+    left: 0; /*viime 0-punkti vasakusse ülaserva*/
+    text-align: center;
+}
+
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 5% auto;
+    padding: 5 rem;
+    width: 600px;
+    height: 650px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0 {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer; 
+    font-size: 2rem;
+}
+
+.movie-poster-modal {
+    width: auto;
+    margin-top: 10px; 
+
+}
+
+
 .movie-card {
     display: inline;
     margin-top: 5rem;
@@ -53,6 +94,13 @@ html {
     }
 }
 
+
+.movie-poster {
+    width: auto;
+    cursor: pointer; /*pildile liikudes muutuks nool käeks*/
+    
+}
+
 .movie-poster:hover {
     transform: scale(1.1); 
     box-shadow: 8px 8px 8px -4px rgb(226, 12, 76); /*varju värv roosa*/
@@ -90,10 +138,71 @@ html {
     letter-spacing: 0.1rem;
 }
 
+
+
+
+.container2 {
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.carousel {
+    max-width: 500px;
+    margin: 0 auto; /* et jääks keskele*/
+    position: relative; /* nupukeste asukoht lähtuks karusselli asukohast*/
+}
+
+.carousel img {
+    width: 100%; /* karuselli pilt sama lai kui karuselli laius*/
+}
+
+.carousel .carousel__item, /* vajalik, et näitaks ainult ühte pilti korraga, selle tulemusel ei näita ühtegi*/
+.carousel .carousel__item--hidden { /* hidden klassi loome javascriptis*/
+    display: none;
+}
+
+.carousel .carousel__item--visible { /* selle kaudu ilmub esimene pilt nähtavale*/
+    display: block;
+    animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex; 
+    justify-content: space-between; /*et nupud oleks laiali lehel*/
+    width: 100%; /*et nuppude ala laiuks kogu pildiala ulatuses*/
+    position: absolute; /*et nupud asuks pildi peal*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(189, 184, 181, 0.466);
+    font-size: 2rem;
+    color: white;
+    margin: 0.5rem;
+
+}
+
+
+
+
+
+
 .movie-info-actions {
     font-size:1.1rem;
 }
-
 
 
 .movie-info-actions ul {

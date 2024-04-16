@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +20,63 @@
                 08/13/2021 (US) Comedy, Action, Adventure, Science Fiction 
                 <span class="movie-duration">1h 55m</span>
             </p>
+
             <div class="movie-poster-container">
                 <img class="movie-poster" src="images/freeGuy.jpg" alt="Free Guy Poster">
+            
+
+            
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeBtn">&times;</span>
+                        <img alt="" class="movie-poster-modal">
+                        <h1>Free Guy! (2021)</h1>
+                    </div>
+                </div>
+
             </div>
+
+
 
             <div class="movie-info-container">
                 <p class="movie-info-quote">Life's too short to be a background character.</p>
 
                 <h2 class="movie-info-overview-title">overview</h2>
                 <p class="movie-info-overview">A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.</p>
+
+
+                
+    <div class="container2">
+        <div class="carousel">
+            
+            <div class="carousel__item carousel__item--visible"> <!-- peidab ülejäänud pildid ära ja ainult esimene pilt jääb näha (muidu on pildid üksteise all)-->
+                <img src="images/1.jpg" alt="">
+            </div>
+
+            <div class="carousel__item">
+                <img src="images/2.jpg" alt="">
+            </div>
+
+            <div class="carousel__item">
+                <img src="images/3.jpg" alt="">
+            </div>
+           
+            <div class="carousel__actions">
+                <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+                <button id="carousel__button--next" aria-label="Next slide">></button>
+                
+            </div>
+
+
+
+        </div>    
+    </div>
+
+
+
+
+
 
                 <div class="movie-info-actions">
                     <ul>
@@ -56,6 +103,7 @@
 
 
     </div>
-    
+     <script src="scripts/app.js"></script>
+     <script src="scripts/app2.js"></script>
 </body>
 </html>
